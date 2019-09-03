@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/naaman-frenkel-01-09-2019/precache-manifest.93b14916318c2dbbe016b5cd338e92c5.js"
+  "/naaman-frenkel-01-09-2019/precache-manifest.8c824bca512b49d708b3158bc4f421a7.js"
 );
 
 self.addEventListener('message', (event) => {
