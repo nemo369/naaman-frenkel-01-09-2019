@@ -1,0 +1,47 @@
+.fav-btn{
+    position: relative;
+}
+.heart {
+    position: absolute;
+    left: auto;
+    right: 50%;
+    top: -50px;
+    margin: auto;
+    width: 2rem;
+    height: 2rem;
+    background: #c471ed;
+    margin: 0.75rem;
+    opacity: 0;
+    max-width: 0;
+    border-top-left-radius: 0.25rem;
+    animation-name: grow;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    transform: rotate(-135deg);
+    transition: all 0.2s;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      background: inherit;
+    }
+    &:before { transform: translateX(50%); }
+    &:after  { transform: translateY(50%); }
+  }
+  @keyframes grow {
+    0%  { transform: scale(1) rotate(-135deg); }
+    25% { transform: scale(1.25) rotate(-135deg); }
+    50% { transform: scale(1) rotate(-135deg); }
+  }
+  
+.heart.active{
+    display: block;
+    opacity: 1;
+    max-width: 5rem;
+
+}

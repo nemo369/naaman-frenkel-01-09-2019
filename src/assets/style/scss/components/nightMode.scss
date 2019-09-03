@@ -1,0 +1,15 @@
+
+.moon{
+    margin: 0 0 0 20px;
+    svg{
+        width: auto;
+        height: 50px;
+    }
+}
+main.night-mode-on{
+    .moon{
+        svg path{
+            fill:wheat;
+        }
+    }
+}

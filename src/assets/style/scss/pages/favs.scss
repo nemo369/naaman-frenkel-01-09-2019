@@ -1,0 +1,17 @@
+.favs {
+  max-width: 75vw;
+  margin: auto;
+  &__title {
+    margin: 3rem 0 1rem;
+    text-align: center;
+  }
+  &__grid {
+    display: grid;
+    padding-bottom: 20vh;;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 35px;
+    .forecast__current {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+:root {
+  --gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  --white:white;
+  --black:black;
+  --darkgray:#222831;
+  --lightgray:#dfdfdf;
+}
+
+$baseFontSize : 16;
+$black: var(--black);
+$white: var(--white);
+$darkgray:var(--darkgray);
+$lightgray:var(--lightgray);
+
+$gradient:var(--gradient);
+// and (orientation: landscape)
+$mobile:  960px;
+
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+
+@function px($pixels, $context: $baseFontSize) {
+  @return $pixels * 1px;
+}
+
+html {
+  font-size: px($baseFontSize);
+  font-size: 1.11vw;
+}
+
+@media(min-width:1440px){
+  html {
+    font-size: px($baseFontSize);
+  }
+}
+body{
+  font-size: px($baseFontSize);
+  color:$black;
+}

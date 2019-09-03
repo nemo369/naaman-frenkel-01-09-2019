@@ -1,0 +1,51 @@
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width : $mobile) {
+    .mobile {
+        display: block;
+    }
+    .sitcky-footer {
+        padding-bottom: 20vh;
+    }
+    .desktop {
+        display: none
+    }
+    .header{
+        padding: 0 1%;
+       flex-wrap: wrap;
+       height: auto;
+    }
+    .search{
+        margin: 10px 0 0;
+        border-radius: 0;
+        padding: 0;
+    }
+    .forecast{
+        max-width: 99vw;
+        height:auto;
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+    .forecast__current{
+        width: 100%;
+    }
+    .week-list__li{
+        padding: 1vw;
+        flex:1;
+    }
+    .week-list {
+        margin: 1% auto;;
+        height: 100%;
+    }
+    .date{
+        padding: 0 15px;
+    }
+    .weather-container{
+        text-align: center;
+    }
+    .search__form{
+        max-width: 99.5vw
+    }
+}

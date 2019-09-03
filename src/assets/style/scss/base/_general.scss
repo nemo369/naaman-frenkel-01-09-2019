@@ -1,0 +1,42 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    max-width: 1440px
+  }
+  
+  .sitcky-footer {
+    min-height:100vh;
+    background: $white;
+  }
+  
+  .logo {
+    height: 38px;
+    width: 148px;
+  }
+  
+  .btn {
+    line-height: 44px;
+    border: 1px solid #000000;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    max-width: 50%;
+    width: 133px;
+    &:hover {
+      background: #000;
+      color: #F4F4F4;
+      border-color: #fff
+    }
+   
+  }
+
+
+  .main{
+    max-width:1440px;
+    margin:auto;
+  }

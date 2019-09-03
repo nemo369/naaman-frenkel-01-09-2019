@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { connect } from 'react-redux';
+import "./App.scss";
+import Main from './Main'
+import { bindActionCreators } from 'redux';
+import * as actionCreators from './store/actions/actionCreators';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+toast.configure()
+
+const mapStateToProps = state => {
+   
+  return {
+      favs: state.favs,
+      city: state.city,
+      nightMode:state.nightMode
+  }
 }
 
+const mapDispachToProps = dispatch => {
+  return bindActionCreators(actionCreators, dispatch);
+}
+const App = connect(mapStateToProps, mapDispachToProps)(Main);
 export default App;
+

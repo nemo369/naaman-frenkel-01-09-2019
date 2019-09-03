@@ -1,0 +1,155 @@
+
+
+.forecast {
+  border-radius: 25px;
+  box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+  background-color:#72edf2;
+  height: 60vh;
+  display: flex;
+  max-width: 75vw;
+  margin: auto;
+}
+
+.forecast__current {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 100%;
+  border-radius: 25px;
+  width: 300px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  transform: translateZ(0) scale(1.02) perspective(1000px);
+  background-size: cover;
+}
+
+.forecast__current:hover {
+  transform: scale(1.1) perspective(1500px) rotateY(10deg);
+}
+
+.weather-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: $gradient;
+  border-radius: 25px;
+  opacity: 0.8;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.date {
+
+  &__string{
+    font-size: 20px
+  }
+}
+
+
+
+.location {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+
+
+.weather-temp {
+  margin: 10px 0;
+  line-height: 1;
+  font-weight: 700;
+  font-size: 4em;
+  color:$white;
+}
+
+.weather-desc{
+  text-decoration: underline;
+  color:$white;
+}
+.forecast__week {
+  position: relative;
+  height: 100%;
+  padding-top: 25px;
+  margin: auto;
+}
+.week-list__li.acitve{
+  background:$white;
+	color: $darkgray;
+}
+.week-list {
+  display: flex;
+  padding: 0;
+  margin: 10px 35px;
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 75%;
+  &__li {
+    height: 100%;
+    padding: 15px;
+    transition: 200ms ease;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .active {
+    background:$white;
+    color: $darkgray;
+    border-radius: 10px;
+  }
+
+  .day-name {
+    display: block;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+
+  .day-icon {
+    display: block;
+    height: 30px;
+    width: auto;
+    margin: 0 auto;
+  }
+  .day-temp {
+    display: block;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-weight: 700;
+  }
+}
+
+.fav-btn {
+  margin: 10px 0 35px;
+  font-size: 30px;
+  padding: 25px 35px;
+	border-radius: 25px;
+  background: #bc4e9c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .full{
+  color:$white;
+
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    transform: scale(0.95);
+  }
+  .feather {
+    height: 1em;
+    width: auto;
+    margin-right: 5px;
+  }
+}

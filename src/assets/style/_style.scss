@@ -1,0 +1,29 @@
+// Base: animations, base, typography, and utilies.
+
+@import './scss/base/var.scss';
+@import './scss/components/nightMode.scss';
+@import './scss/base/utilites.scss';
+@import './scss/base/reset.scss';
+@import './scss/base/general';
+@import './scss/base/_fonts.scss';
+
+
+
+@import './scss/pages/home.scss';
+@import './scss/pages/favs.scss';
+
+
+// Components: have a single scss file for each individual component
+@import './scss/components/meta.scss';
+@import './scss/components/header.scss';
+@import './scss/components/search-bar.scss';
+@import './scss/components/search-dropdown.scss';
+@import './scss/components/forecast.scss';
+@import './scss/components/favbtn.scss';
+
+
+
+@import './scss/_mobile.scss';
+
+
+

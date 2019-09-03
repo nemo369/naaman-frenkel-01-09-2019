@@ -1,0 +1,38 @@
+.search__form {
+  position: relative;
+}
+.active-dropdown .search__dropdown {
+  z-index: 9;
+  opacity: 1;
+  max-height: 100vh;
+}
+.search__dropdown {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  position: absolute;
+  background: $gradient;
+  z-index: 5;
+  padding: 20px 50px 100px;
+  border-radius: 0px 0px 25px 25px;
+  max-height: 0;
+  height: auto;
+  transition: all 0.4s ease-out;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -1;
+  li {
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 20px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.158);
+    }
+    button {
+      color: $white;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+    }
+  }
+}
