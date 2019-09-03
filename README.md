@@ -1,6 +1,6 @@
 
 ## Herolo Home Assignment
-This project is avilabe in [GItHub Pages](https://github.com/facebook/create-react-app).
+This project is avilabe in [GItHub Pages](https://nemo369.github.io/naaman-frenkel-01-09-2019/).
 
 ## OVERVIEW
 
