@@ -2,7 +2,6 @@
   "homepage": "https://gitname.github.io/naaman-frenkel-01-09-2019",
   "name": "weather",
   "version": "0.1.0",
-  "proxy": "http://localhost:8180",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",

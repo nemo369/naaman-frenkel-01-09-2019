@@ -1,33 +1,63 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 //Pages
 import FavoritePage from "./Pages/FavoritePage/FavoritePage";
 import WeatherPage from "./Pages/WeatherPage/WeatherPage";
 import Header from "./Components/Header";
 
-const Main = ({nightMode}) => {
+const Main = ({ nightMode }) => {
+  const styles = [
+    {
+      property: "--black",
+      color: "#000",
+      nightMode: "#fff"
+    },
+    {
+      property: "--white",
+      color: "#fff",
+      nightMode: "#000"
+    },
+    {
+      property: "--darkgray",
+      color: "#222831",
+      nightMode: "#dfdfdf"
+    },
+    {
+      property: "--lightgray",
+      color: "#dfdfdf",
+      nightMode: "#222831"
+    },
+    {
+      property: "--gradient",
+      color: "linear-gradient(135deg, #72edf2 10%, #5151e5 100%)",
+      nightMode: "linear-gradient(135deg, #5151e5 10%, #72edf2 100%)"
+    }
+  ];
   if (nightMode) {
-    document.documentElement.style.setProperty('--black','#fff');
-    document.documentElement.style.setProperty('--white','#000');
-    document.documentElement.style.setProperty('--darkgray','#dfdfdf');
-    document.documentElement.style.setProperty('--lightgray','#222831');
-    document.documentElement.style.setProperty('--gradient','#blue');
+    styles.forEach(style => {
+      document.documentElement.style.setProperty(
+        style.property,
+        style.nightMode
+      );
+    });
   } else {
-    document.documentElement.style.setProperty('--black','');
-    document.documentElement.style.setProperty('--white','');
-    document.documentElement.style.setProperty('--darkgray','');
-    document.documentElement.style.setProperty('--lightgray','');
-    document.documentElement.style.setProperty('--gradient','');
+      styles.forEach(style => {
+        document.documentElement.style.setProperty(
+          style.property,
+          style.color
+        );
+      });
   }
+
   return (
-    <main className={`app sitcky-footer ${nightMode ? 'night-mode-on' : ''}`}>
-      <BrowserRouter>
+    <main className={`app sitcky-footer ${nightMode ? "night-mode-on" : ""}`}>
+      <HashRouter >
         <Header />
         <Route exact path="/" component={WeatherPage} />
         <Route path="/favorite" component={FavoritePage} />
         <Route exact path="/weather/:cityid" component={WeatherPage} />
-      </BrowserRouter>
+      </HashRouter>
     </main>
   );
 };

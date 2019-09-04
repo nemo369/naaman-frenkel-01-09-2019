@@ -19,14 +19,16 @@ class ForecastCurrent extends React.Component {
         </div>
         <div className="weather-container">
           <div className="weather__icon">
+            {weatherIcon &&
             <img
-              className="day-icon"
-              src={`https://developer.accuweather.com/sites/default/files/${weatherIcon &&
-                (parseInt(weatherIcon) <= 9
-                  ? "0" + weatherIcon
-                  : weatherIcon)}-s.png`}
+            className="day-icon"
+            src={`https://developer.accuweather.com/sites/default/files/${
+              (parseInt(weatherIcon) <= 9
+              ? "0" + weatherIcon
+              : weatherIcon)}-s.png`}
               alt={weatherText}
-            />
+              />
+            }
           </div>
           <h1 className="weather-temp">
             {temp ? temp.Metric.Value : ""}°{temp ? temp.Metric.Unit : ""}
