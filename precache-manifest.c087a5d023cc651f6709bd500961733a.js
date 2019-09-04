@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "78b7455e1e560f1b5933891b5a6aae50",
+    "revision": "306073344e3ab4fffed5310622844154",
     "url": "/naaman-frenkel-01-09-2019/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/naaman-frenkel-01-09-2019/static/css/2.39017165.chunk.css"
   },
   {
-    "revision": "25d6e25a7bcb8aae045d",
+    "revision": "09a3a52d29e212758761",
     "url": "/naaman-frenkel-01-09-2019/static/css/main.888ac157.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/naaman-frenkel-01-09-2019/static/js/2.5856d99f.chunk.js"
   },
   {
-    "revision": "25d6e25a7bcb8aae045d",
-    "url": "/naaman-frenkel-01-09-2019/static/js/main.196e258e.chunk.js"
+    "revision": "09a3a52d29e212758761",
+    "url": "/naaman-frenkel-01-09-2019/static/js/main.f3ecd5e9.chunk.js"
   },
   {
     "revision": "22315adae64d75b24aed",
